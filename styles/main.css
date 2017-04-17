@@ -1,9 +1,11 @@
+/*------------General styles-----------*/
 *
 {
     margin: 0;
     padding: 0;
     border: 0;
     font-family: helvetica, sans-serif;
+    color: rgb(102, 102, 102);
 }
 
 h1
@@ -25,9 +27,33 @@ h2
     letter-spacing: 1%;
 }
 
+section
+{
+    height: 500px;
+}
+
+section p
+{
+    text-align: center;
+}
+
+.services, .about, .team
+{
+    padding: 50px 0;
+}
+
+.parallax-inner
+{
+    padding-top: 50px;
+     height: 450px;
+}
+/*----------Navigation Menu----------*/
 nav
 {
     height: 75px;
+    position: fixed;
+    background-color: white;
+    width: 100%;
 }
 nav a
 {
@@ -37,20 +63,23 @@ nav a
     padding: 20px
 }
 
+nav a:hover
+{
+    color: rgba(0, 102, 255,0.8);
+}
+
 nav ul li
 {
     display: inline-block;
     position: relative;
     top: 25px;
 /*    float: right;*/
-    right: -45%;
+    right: -65%;
     margin-right: 20px;
 }
-/*------------General styles-----------*/
-
-section
+.nav-guide
 {
-    height: 500px;
+    padding-top: 40px;
 }
 /*---------Start Parallax--------------*/
 
@@ -66,17 +95,23 @@ section
 .welcome .parallax-inner
 {
    background-color:rgba(255, 0, 0,0.2);
-   height: 800px;
+   height: 750px;
 }
 
 .welcome
 {
     height: 800px;
+    padding-top: 75px;
 }
 
-/*--------------What we offer----------*/
+.welcome h2
+{
+    margin-top: 350px;
+}
 
-.offer
+/*--------------What we services----------*/
+
+.services
 {
    
 }
@@ -93,7 +128,6 @@ section
 .mission .parallax-inner
 {
    background-color:rgba(102, 255, 102,0.2);
-   height: 500px;
 }
 /*--------------The Team----------*/
 
@@ -107,5 +141,4 @@ section
 .contact .parallax-inner
 {
    background-color:rgba(0, 102, 255,0.2);
-   height: 500px;
 }
