@@ -15,13 +15,17 @@
   <body>
     <!-----------------------------------------------------------Menu---------------------------------------------->
       <nav>
-        <ul>
-            <li><a href='#Home'>Home</a></li>  
-            <li><a href='#Serv'>Our Services</a></li>
-            <li><a href='#Ab'>About</a></li>
-            <li><a href='#Te'>The Team</a></li>
-            <li><a href='#Con'>Contact</a></li>
-        </ul>
+          <a href="#Home"><img src="img/EM-LOGO.png"></a>
+        <div>
+            <ul>
+                <li><a href='#Home'>Home</a></li>  
+                <li><a href='#Serv'>Our Services</a></li>
+                <li><a href='#Ab'>About</a></li>
+                <li><a href='#Mis'>Our Mission</a></li>
+                <li><a href='#Te'>The Team</a></li>
+                <li><a href='#Con'>Contact</a></li>
+            </ul>
+        </div>
       </nav>
       
     <!-----------------------------------------------------Welcome Parallax Section---------------------------------------->
@@ -132,7 +136,8 @@
     </section>
       
     <!-------------------------------------------------------Mission Statement------------------------------------------>
-    <section class="parallax mission">
+      <div id="Mis" class="nav-guide"></div>
+      <section class="parallax mission">
       <div class="parallax-inner">
           <h2>Mission</h2>
           <div class="text-container">
@@ -254,22 +259,23 @@
     <div id="Con" class="nav-guide"></div>
      <section class="parallax contact">
       <div class="parallax-inner">
-          <h2>Contact</h2>
+          <h2>Contact Us</h2>
           
           <div>
             <form action="/action_page.php">
 
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Your name..">
-                
-                <label for="name">E-mail</label>
-                <input type="text" id="email" name="email" placeholder="Your Email..">
-                
-                <label for="name">Subject</label>
-                <input type="text" id="subject" name="subject" placeholder="Subject..">
+                <div>
+                    <input type="text" id="name" name="name" placeholder="Name">
 
-                <label for="subject">Message</label>
-                <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
+
+                    <input type="text" id="email" name="email" placeholder="Email">
+
+
+                    <input type="text" id="subject" name="subject" placeholder="Subject">
+
+                </div>
+                
+                <textarea id="message" name="message" placeholder="Message"></textarea>
 
                 <input type="submit" value="Submit">
 
@@ -277,7 +283,9 @@
           </div>
       </div>
     </section>
+    <section class="footer">
       
+    </section> 
     <script src="scripts/script.js"></script>
   </body>
     
