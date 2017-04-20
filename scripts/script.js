@@ -11,5 +11,31 @@ $(document).ready(function()
    },function(){
       $('.box2').css('opacity', 1).slideUp(500).animate({ opacity:0}, {queue: false, duration: 'slow'}); 
    });
+     
+    $(window).scroll(function(event) {
+       
+        var y = $(this).scrollTop();
+       
+        
+        if(y >=300)
+            {
+                $('.circles').fadeIn();
+                $('.circle1').addClass('animate');
+                $('.circle3').addClass('animate');
+                   
+            }
+        
+        if(y >=1000)
+            {
+                $('.aCell').fadeIn();
+                $('.bCell').addClass('animate');
+                $('.dCell').addClass('animate'); 
+            }
+       
+    });
     
 });
+
+
+
+    

@@ -130,12 +130,18 @@ nav ul li
 
 .services
 {
-   
+   height: 503.75px;
 }
 #Serv
 {
     padding-top: 100px;
 }
+
+.animate
+{
+    transition: 1s ease-in-out;
+}
+
 
 /*----Circle and text design----*/
 .circ /*outer part of circle*/
@@ -145,10 +151,27 @@ nav ul li
     height: 250px;
     display: inline-block;
     border-radius: 200px;
-    margin: 0 2%;
     transition: background-color 0.32s ease-in;
 }
 
+.circle1
+{
+    left: -500px;
+}
+
+.circle3
+{
+   right: -500px; 
+}
+.circle1.animate
+{
+    transform: translate(40em,0);
+}
+
+.circle3.animate
+{
+    transform: translate(-40em,0);
+}
 .circ:hover
 {
    background-color: cadetblue; 
@@ -167,7 +190,8 @@ nav ul li
 .circles /* all circles and text boxs collective*/
 {
    margin-top:50px;
-   text-align: center; 
+   text-align: center;
+    display: none;
 }
 
 .desc
@@ -180,6 +204,7 @@ nav ul li
     display: inline-block;
     width: 400px;
     margin: 0 5%;
+    position: relative;
 }
 
 .circles .row div:nth-child(n+2) /* text and seperator in circle container */
@@ -201,6 +226,7 @@ nav ul li
    margin: 0 auto;
    margin-bottom: 20px;
 }
+
 
 /*----------------------------------------------------------------About------------------------------------------------------*/
 
@@ -267,6 +293,32 @@ nav ul li
 .about > div:first-child p
 {
    font-size: 25px; 
+}
+
+.bCell
+{
+    position: relative;
+    left: -500px;
+}
+
+.aCell
+{
+    display: none;
+}
+.dCell
+{
+ position: relative;
+    right: -500px;
+}
+
+.bCell.animate
+{
+    transform: translate(5em,0);
+}
+
+.dCell.animate
+{
+    transform: translate(-30em,0);
 }
 /*--------------------------------------------------Mission Statement--------------------------------------------------*/
 .mission
