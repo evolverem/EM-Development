@@ -383,6 +383,7 @@ nav ul li
     padding: 25px;
     background: rgba(255,255,255,0.8);
     border-radius: 10px;
+    position: relative;
 }
 
 .mission .text-container div p
@@ -391,7 +392,31 @@ nav ul li
     letter-spacing: 2px;
     text-align: left;
 }
-
+.anim-hop
+{
+    animation: hop 0.5s linear;
+}
+.mission1,.mission2,.mission3
+{
+  opacity: 0;   
+}
+@keyframes hop
+{
+    0%
+    {
+        top: 0px;
+    }
+    
+    50%
+    {
+        top: -50px;
+    }
+    
+    100%
+    {
+      top: 0px;  
+    }
+}
 .Mrow
 {
     margin-top: 25px;
@@ -441,7 +466,7 @@ nav ul li
 /*------------------------------------------------------------The Team---------------------------------------------------*/
 .team
 {
-   
+    height: 693px; 
 }
 
 #Te
@@ -537,6 +562,21 @@ nav ul li
    margin-bottom: 20px;
 }
 
+.team-1
+{
+    position: relative;
+    left: -800px;
+}
+.team-container
+{
+    display: none;
+  
+}
+.team-2
+{
+  position: relative;
+    right: -800px;  
+}
 /*-----------------------------------------------------------Contact------------------------------------------------------*/
 .contact .parallax-inner
 {
