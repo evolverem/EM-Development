@@ -19,7 +19,7 @@ $(document).ready(function()
     $(window).scroll(function(event) {
        
         var y = $(this).scrollTop();
-       
+       //Convert the ifs to switch statements
         //-----------Our services-----------Fade in and slide in from the side
         if(y >=300)
             {
@@ -29,7 +29,7 @@ $(document).ready(function()
                    
             }
         //---------------About-------------Fade in And slide in individually
-        if(y >=1000)
+        if(y >=800)
             {
                 $('.aCell').fadeIn(2000); 
                 $('.bCell').addClass('animate');
@@ -40,13 +40,21 @@ $(document).ready(function()
                 $('.circ4').animate({right: '0px'},1200);
                 
                 //Center text column
-                 $('.cCell').animate({top: '0px'},800);
+                 $('.cCell').animate({top: '0px'},1200);
                 
             }
-        if(y >=1500)
+        if(y >=2200)
             {
-              $('.grow1').addClass('animate'); 
-              $('.inner1').addClass('animate');
+               
+                $('.grow1').addClass('anim-grow').animate({ opacity:1});
+               
+                setTimeout(function(){
+                    $('.grow2').addClass('anim-grow').animate({ opacity:1});
+                },200);
+                
+                setTimeout(function(){
+                    $('.grow3').addClass('anim-grow').animate({ opacity:1});
+                },400);
             }
     });
     

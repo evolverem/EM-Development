@@ -400,6 +400,7 @@ nav ul li
     border-radius: 100px;
     background-color:cornflowerblue;
     display: inline-block;
+
 }
 
 .Mcirc
@@ -411,20 +412,31 @@ nav ul li
     margin: 15px auto 0 auto;
 }
 
-.grow1.animate, .grow2.animate, .grow3.animate
+.anim-grow
 {
-    width: 250px;
-    height: 250px;
-    border-radius: 200px;
+    animation: grow 0.5s linear;
 }
 
-.inner1.animate,
-.inner2.animate,
-.inner3.animate
+.grow1,.grow2,.grow3
 {
-    width: 220px;
-    height: 220px;
-    border-radius: 200px;  
+ opacity: 0;
+}
+
+@keyframes grow
+{
+    0%
+    {
+        transform: scale(1.0);
+    }
+    
+    50%
+    {
+         transform: scale(1.2);
+    }
+    100%
+    {
+        transform: scale(1.0);
+    }
 }
 /*------------------------------------------------------------The Team---------------------------------------------------*/
 .team
