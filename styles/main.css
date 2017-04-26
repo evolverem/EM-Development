@@ -19,9 +19,9 @@ html
     float: right;
     position: relative;
     right: 50px;
-    top: 5px;
+    top: 2px;
     display: none;
-    margin-bottom: 10px;
+    margin: 13px;
 }
 #menu-btn div
 {
@@ -102,6 +102,7 @@ nav ul a
     font-size: 25px;
     padding: 20px;
     transition: color 0.25s ease-in;
+    
 }
 
 nav a:hover
@@ -716,6 +717,10 @@ input[type=submit]:hover {
 
 @media only screen and (max-width: 900px) 
 {
+     .menu-list li a
+    {
+        
+    }
    nav ul li 
     {
         box-sizing: border-box;
@@ -725,14 +730,17 @@ input[type=submit]:hover {
     {
         
         display: none;
+        width: 100% !important;
+        margin:0px;
+        padding: 0px;
     }
     
-    nav
-    {
-/*        height: 75px;*/
-    }
     #menu-btn{
         display: block;
+    }
+    nav
+    {
+        padding: 0;
     }
 }
 
@@ -742,9 +750,12 @@ input[type=submit]:hover {
     {
         
         display: inline-block !important;
-    } 
-    nav ul li 
-    {
         
+    } 
+    nav ul li
+    {
+        position: relative !important;
+        left: 50px !important;
     }
+    
 }
