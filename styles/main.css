@@ -130,7 +130,7 @@ nav ul li
 
 .services
 {
-   height: 503.75px;
+/*   height: 503.75px;*/
 }
 #Serv
 {
@@ -156,12 +156,12 @@ nav ul li
 
 .circle1
 {
-    left: -500px;
+    left: -400px;
 }
 
 .circle3
 {
-   right: -500px; 
+   right: -400px; 
 }
 .circle1.animate
 {
@@ -191,7 +191,7 @@ nav ul li
 {
    margin-top:50px;
    text-align: center;
-    display: none;
+   opacity: 0;
 }
 
 .desc
@@ -203,7 +203,7 @@ nav ul li
 {
     display: inline-block;
     width: 400px;
-    margin: 0 5%;
+    margin: 0 125px;
     position: relative;
 }
 
@@ -234,7 +234,7 @@ nav ul li
 {
   background-color: rgb(51, 51, 51); 
   padding-top: 50px;
-    height: 750px;
+/*    height: 750px;*/ 
 }
 .about p, .about h2
 {
@@ -307,7 +307,7 @@ nav ul li
 }
 .aCell
 {
-    display: none;
+    opacity: 0;
 }
 .cCell p
 {
@@ -349,7 +349,7 @@ nav ul li
 /*--------------------------------------------------Mission Statement--------------------------------------------------*/
 .mission
 {
-    height: 900px;
+/*    height: 900px;*/
 }
 
 #Mis
@@ -358,12 +358,12 @@ nav ul li
 }
 .mission h2
 {
-    color: white;
+  color: white;
 }
 .mission .parallax-inner
 {
    background-color:rgba(102, 255, 102,0.2);
-    height: 850px;
+/*    height: 850px;*/
 }
 
 .mission .text-container
@@ -400,6 +400,7 @@ nav ul li
 {
   opacity: 0;   
 }
+
 @keyframes hop
 {
     0%
@@ -466,7 +467,7 @@ nav ul li
 /*------------------------------------------------------------The Team---------------------------------------------------*/
 .team
 {
-    height: 693px; 
+/*    height: 693px; */
 }
 
 #Te
@@ -565,17 +566,18 @@ nav ul li
 .team-1
 {
     position: relative;
-    left: -800px;
+    left: -25%;
 }
+
 .team-container
 {
-    display: none;
+   opacity: 0;
   
 }
 .team-2
 {
   position: relative;
-    right: -800px;  
+    right: -25%;  
 }
 /*-----------------------------------------------------------Contact------------------------------------------------------*/
 .contact .parallax-inner
@@ -655,4 +657,16 @@ input[type=submit]:hover {
 {
     height: 200px;
     background-color: rgb(51, 51, 51);
+}
+
+/******************Media Queries******************/
+@media only screen and (max-width: 1500px) 
+{
+    .circles .row /* circles sperator and text container*/
+    {
+        display:list-item;
+        width: 400px;
+        margin: 0 125px;
+        position: relative;
+    }
 }

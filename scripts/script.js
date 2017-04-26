@@ -19,19 +19,22 @@ $(document).ready(function()
     $(window).scroll(function(event) {
        
         var y = $(this).scrollTop();
+        //Notes:
        //Convert the ifs to switch statements
+        // to fix the sizing problem of the container remove the set height but instead of making the container
+        //display none, make the individual obkects display none and then each one fade in.
+        //if that doesnt work then lower the opacity of the conainter and bring it up once animation comences
         //-----------Our services-----------Fade in and slide in from the side
         if(y >=100)
             {
-                $('.circles').fadeIn(2000);
+                $('.circles').fadeIn(1000).animate({ opacity:1}, {queue: false, duration: 'slow'})
                 $('.circle1').addClass('animate');
                 $('.circle3').addClass('animate');
-                   
             }
         //---------------About-------------Fade in And slide in individually
-        if(y >=500)
+        if(y >=700)
             {
-                $('.aCell').fadeIn(2000); 
+                $('.aCell').fadeIn(1000).animate({ opacity:1}, {queue: false, duration: 'slow'})
                 $('.bCell').addClass('animate');
                 //individual Circles animated and delayed
                 $('.circ1').animate({right: '0px'},800);
@@ -44,7 +47,7 @@ $(document).ready(function()
                 
             }
         //--------------------Mission Staement-----------------
-        if(y >=1500)
+        if(y >=1800)
             {
                //message content boxes
                  $('.mission1').addClass('anim-hop').animate({ opacity:1});;
@@ -68,11 +71,10 @@ $(document).ready(function()
                 },400);
             }
         //-------------Meet the Team--------------------
-        if(y >=2200)
+        if(y >=2500)
             {
-                $('.team-container').delay(100).fadeIn();
-                
-               $('.team-1').animate({left: '0px'},800);
+                $('.team-container').fadeIn(1000).animate({ opacity:1}, {queue: false, duration: 'slow'})
+                $('.team-1').animate({left: '0px'},800);
                 $('.team-2').animate({right: '0px'},800);
             }
     });
