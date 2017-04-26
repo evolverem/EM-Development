@@ -7,7 +7,30 @@
     font-family: helvetica, sans-serif;
     color: rgb(102, 102, 102);
 }
+html
+{
+    overflow-x: hidden;
+}
 
+#menu-btn
+{
+    width: 50px;
+    height: 50px;
+    float: right;
+    position: relative;
+    right: 50px;
+    top: 5px;
+    display: none;
+    margin-bottom: 10px;
+}
+#menu-btn div
+{
+    height: 10px;
+    width: 50px;
+    background-color: black;
+    margin-top: 5px;
+    border-radius: 5px;
+}
 h1
 {
     text-align: center;
@@ -52,7 +75,6 @@ section p
 /*-----------------------------------------------Navigation Menu--------------------------------------------*/
 nav
 {
-/*    height: 75px;*/
     position: fixed;
     background-color: white;
     width: 100%;
@@ -61,9 +83,9 @@ nav
     
 }
 
-nav div
+nav ul
 {
-  height: 50px;
+  
   float: right;
   margin-right: 100px;
 }
@@ -73,7 +95,7 @@ nav img
     width: 200px;
     margin-left: 200px;
 }
-nav a
+nav ul a
 {
     text-decoration: none;
     color: black;
@@ -191,8 +213,13 @@ nav ul li
 {
    margin-top:50px;
    text-align: center;
-   opacity: 0;
 }
+
+.circle2
+{
+    opacity: 0
+}
+
 
 .desc
 {
@@ -206,6 +233,7 @@ nav ul li
     margin: 0 125px;
     position: relative;
 }
+
 
 .circles .row div:nth-child(n+2) /* text and seperator in circle container */
 {
@@ -660,13 +688,63 @@ input[type=submit]:hover {
 }
 
 /******************Media Queries******************/
-@media only screen and (max-width: 1500px) 
+
+@media only screen and (max-width: 1550px) 
 {
-    .circles .row /* circles sperator and text container*/
+   #logo
     {
-        display:list-item;
-        width: 400px;
-        margin: 0 125px;
         position: relative;
+        display: none !important;
+    }
+    nav ul li
+    {
+        position: relative;
+        top: 5px;
+        margin: 0 auto;
+         line-height: 75px;
+        
+    }
+}
+
+@media only screen and (max-width: 1000px) 
+{
+  nav ul li a
+    {
+        padding: 10px
+    }  
+}
+
+@media only screen and (max-width: 900px) 
+{
+   nav ul li 
+    {
+        box-sizing: border-box;
+        width: 100%;
+    }   
+    nav ul
+    {
+        
+        display: none;
+    }
+    
+    nav
+    {
+/*        height: 75px;*/
+    }
+    #menu-btn{
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 900px)
+{
+   nav ul
+    {
+        
+        display: inline-block !important;
+    } 
+    nav ul li 
+    {
+        
     }
 }

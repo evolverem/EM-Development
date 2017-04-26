@@ -1,5 +1,12 @@
 $(document).ready(function()
 {
+    var menuBtn = $('#menu-btn');
+    var size = $(window).width();
+    alert(size);
+    
+    menuBtn.click(function(){
+        $('.menu-list').slideToggle();
+    });
     //-------------Meet the team---------------------------------
     
     //----On hover effects for team member description
