@@ -27,7 +27,7 @@ html
 {
     height: 10px;
     width: 50px;
-    background-color: black;
+    background-color: rgb(102, 102, 102);;
     margin-top: 5px;
     border-radius: 5px;
 }
@@ -214,11 +214,7 @@ nav ul li
 {
    margin-top:50px;
    text-align: center;
-}
-
-.circle2
-{
-    opacity: 0
+    opacity: 0;
 }
 
 
@@ -398,7 +394,8 @@ nav ul li
 .mission .text-container
 {
    text-align: center;
-    margin-top: 25px;
+    margin-top: 25px 0;
+    padding-bottom: 25px;
 }
 
 .mission .text-container > div
@@ -714,13 +711,105 @@ input[type=submit]:hover {
         padding: 10px
     }  
 }
+/*-----------------------------Our services--------------------*/
+@media only screen and (max-width: 1970px) 
+{
+    .row
+    {
+        margin: 0 20px !important;
+        margin-bottom: 20px !important;
+    }
+    .circle1.animate
+    {
+        
+        transform: translate(30em,0);
+    }
+
+    .circle3.animate
+    {
+        transform: translate(-30em,0);
+    }
+    .circ
+    {
+        
+    }
+}
+
+@media only screen and (max-width: 1350px) 
+{
+
+    .circle3.animate, 
+    .circle1.animate
+    {
+        transform: none;
+    }
+    
+    .circle1,.circle2,.circle3
+    {
+       
+        width: 100% !important;
+    }
+    
+    .circle3,.circle1
+    {
+       left: 0%;
+    }
+    
+
+    .row div p
+    {
+        margin: 0 auto;
+        text-align: left;
+        width: 70%;
+    }
+    
+    .circ /*outer part of circle*/
+    {
+       
+        width: 150px;
+        height: 150px;
+        
+    }
+
+    .circ div /* inner color of circle */
+    {
+     
+      width: 100px;
+      height: 100px;
+     
+    }
+
+        /*---Contact Page*/
+           .contact .parallax-inner > div
+        {
+        width: 95%;
+        }
+    }
+/*--------------------------------------------------------------*/
 
 @media only screen and (max-width: 900px) 
 {
      .menu-list li a
     {
-        
+       border-bottom: 2px solid gray;
+        display: block;
+        margin: 0;
+        padding: 10px;
+        background-color: white;
+        transition: background-color 0.25s ease-in;
+    
     }
+    
+      .menu-list li a:hover
+    {
+        background-color: gray;
+        color: white !important;
+    }
+    .menu-list li:first-child a
+    {
+        border-top: 2px solid gray;
+    }
+   
    nav ul li 
     {
         box-sizing: border-box;
@@ -742,6 +831,9 @@ input[type=submit]:hover {
     {
         padding: 0;
     }
+    
+ 
+    
 }
 
 @media only screen and (min-width: 900px)
@@ -756,6 +848,7 @@ input[type=submit]:hover {
     {
         position: relative !important;
         left: 50px !important;
+       
     }
     
 }
