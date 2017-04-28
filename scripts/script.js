@@ -2,8 +2,10 @@ $(document).ready(function()
 {
     var menuBtn = $('#menu-btn');
     var listAnchor = $('.list-anchor');
-    var size = $(window).width();
-    alert(size);
+    var wSize = $(window).width();
+    var ys = $(this).scrollTop();
+    alert(wSize);
+    console.log(ys);
     
     menuBtn.click(function(){
         $('.menu-list').slideToggle();
@@ -44,22 +46,25 @@ $(document).ready(function()
                 $('.circle3').addClass('animate');
             }
         //---------------About-------------Fade in And slide in individually
-        if(y >=1100)
+        if((y >=1100 && wSize >= 950) || (y >=1800 && wSize <= 950) )
             {
                 $('.aCell').fadeIn(1000).animate({ opacity:1}, {queue: false, duration: 'slow'})
                 $('.bCell').addClass('animate');
-                //individual Circles animated and delayed
-                $('.circ1').animate({right: '0px'},800);
-                $('.circ2').animate({right: '0px'},950);
-                $('.circ3').animate({right: '0px'},1100);
-                $('.circ4').animate({right: '0px'},1200);
-                
-                //Center text column
+                 //Center text column
                  $('.cCell').animate({top: '0px'},1200);
                 
+                if((y >=1100 && wSize >= 950) || (y >=2500 && wSize <= 950))
+                {
+                    //individual Circles animated and delayed
+                    $('.circ1').animate({right: '0px'},800);
+                    $('.circ2').animate({right: '0px'},950);
+                    $('.circ3').animate({right: '0px'},1100);
+                    $('.circ4').animate({right: '0px'},1200);
+                }
+               
             }
         //--------------------Mission Staement-----------------
-        if(y >=2100)
+        if((y >=2100 && wSize >= 950) || (y >= 3300 && wSize <= 950))
             {
                //message content boxes
                  $('.mission1').addClass('anim-hop').animate({ opacity:1});;
@@ -83,7 +88,7 @@ $(document).ready(function()
                 },400);
             }
         //-------------Meet the Team--------------------
-        if(y >=2800)
+        if((y >=2800 && wSize >= 950) || (y >= 4900 && wSize <= 950))
             {
                 $('.team-container').fadeIn(1000).animate({ opacity:1}, {queue: false, duration: 'slow'})
                 $('.team-1').animate({left: '0px'},800);

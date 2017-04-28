@@ -32,6 +32,10 @@ html
     margin-top: 5px;
     border-radius: 5px;
 }
+nav h2
+{
+    display: none;
+}
 h1
 {
     text-align: center;
@@ -803,6 +807,15 @@ input[type=submit]:hover {
 
 @media only screen and (max-width: 950px) 
 {
+    /*----Title Dispay--*/
+     nav h2
+        {
+            font-size: 30px;
+            display: inline-block;
+            margin-left: 10px;
+            margin-top: 20px;
+            color: gray;
+        }
     /*--------Navigation------------------*/
      .menu-list li a
     {
@@ -858,7 +871,25 @@ input[type=submit]:hover {
     }
     
 }
+@media only screen and (max-width: 600px) 
+{
+   .cCell
+    {
+        margin: 0 auto;
+    }
+    
+}
 
+@media only screen and (max-width: 490px)
+{
+  .team-content, 
+    .box1, 
+    .box2
+    {
+     left: -9%;
+    } 
+    
+}
 @media only screen and (max-width: 1550px) 
 {
     /*----------Mission-------------*/
