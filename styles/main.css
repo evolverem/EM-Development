@@ -1,3 +1,4 @@
+
 /*------------General styles-----------*/
 *
 {
@@ -155,6 +156,7 @@ nav ul li
 {
 /*   height: 503.75px;*/
 }
+
 #Serv
 {
     padding-top: 100px;
@@ -320,6 +322,11 @@ nav ul li
    font-size: 25px; 
 }
 
+.about > div:first-child
+{
+    margin-bottom: 25px;
+}
+
 .bCell
 {
     position: relative;
@@ -384,6 +391,7 @@ nav ul li
 .mission h2
 {
   color: white;
+    margin-bottom: 25px;
 }
 .mission .parallax-inner
 {
@@ -401,7 +409,8 @@ nav ul li
 .mission .text-container > div
 {
   display: inline-block;
-    margin: 0 5%;  
+    margin: 0 5%;
+    margin-bottom: 25px;
 }
 .mission .text-container > div > div:first-child
 {
@@ -452,7 +461,7 @@ nav ul li
     border-radius: 100px;
     background-color:cornflowerblue;
     display: inline-block;
-
+    float:
 }
 
 .Mcirc
@@ -784,11 +793,17 @@ input[type=submit]:hover {
         {
         width: 95%;
         }
+    /*----About-----*/
+    .bCell.animate
+    {
+        transform: translate(6.25em,0);
     }
+}
 /*--------------------------------------------------------------*/
 
-@media only screen and (max-width: 900px) 
+@media only screen and (max-width: 950px) 
 {
+    /*--------Navigation------------------*/
      .menu-list li a
     {
        border-bottom: 2px solid gray;
@@ -831,12 +846,55 @@ input[type=submit]:hover {
     {
         padding: 0;
     }
-    
- 
+    /*-----------------------------*/
+    .Mrow
+    {
+        display: none !important;
+    }
+     .mission .text-container > div > div:first-child
+    {
+        float: none !important;
+        margin: 0 auto;
+    }
     
 }
 
-@media only screen and (min-width: 900px)
+@media only screen and (max-width: 1550px) 
+{
+    /*----------Mission-------------*/
+    
+    .mission .text-container > div > div:first-child
+    {
+        width: 75%;
+        padding: 25px;
+        background: rgba(255,255,255,0.8);
+        border-radius: 10px;
+        position: relative;
+       float: right;
+    }
+    .Mrow
+    {
+        width: 150px;
+        height: 150px;
+        border-radius: 100px;
+        display: block;
+        position: relative;
+        top: 15px;
+        
+    }
+
+    .Mcirc
+    {
+        width: 120px;
+        height: 120px;
+        border-radius: 100px;
+        background-color:aliceblue;  
+        position: relative;
+        top: 14px;
+    }
+}
+
+@media only screen and (min-width: 950px)
 {
    nav ul
     {
